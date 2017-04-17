@@ -1,0 +1,17 @@
+#!/bin/bash
+CPUINFO=`cat /proc/cpuinfo | grep processor | wc -l`
+
+if [ $CPUINFO -eq 4 ];then
+    PLATFORM=master
+else
+    PLATFORM=slave
+fi
+
+killall -9 medium_server
+insmod  /home/root/driver/$PLATFORM/ov10640_490_camera.ko
+insmod /home/root/driver/$PLATFORM/ov10640_490_camera_mipi.ko
+
+cd video
+/home/root/vpu/$PLATFORM/medium_server -C  /home/root/vpu/config_enc &
+
+
