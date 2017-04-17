@@ -1,5 +1,0 @@
----- SemSendCmd Matches (4 in 1 files) ----
-Client.c:	sem_t SemSendCmd;		//控制线程发送命令信号量
-Client.c:			sem_wait(&(pParam->SemSendCmd));
-Client.c:	sem_post(&(pParam->SemSendCmd));
-Client.c:	sem_init(&(Param.SemSendCmd), 0, 0);
