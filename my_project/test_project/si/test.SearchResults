@@ -1,0 +1,3 @@
+---- GetFrameFromAACFile Matches (2 in 1 files) ----
+Main.c (u:\my_project\test_project):º¯ Êý Ãû : GetFrameFromAACFile
+Main.c (u:\my_project\test_project):int GetFrameFromAACFile(FILE* pInputFile, char* pOutBuf, int* pnDataLen, int nInIndex, int* pnFileFlag)
